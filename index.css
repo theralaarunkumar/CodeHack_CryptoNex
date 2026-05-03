@@ -1,0 +1,152 @@
+/* 1. Google Fonts — MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@800&family=DM+Sans:wght@400;500;700&display=swap');
+
+/* 2. Tailwind directives — AFTER imports */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030712;
+    background-image: radial-gradient(circle, #1f2937 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-green: #09de80;
+  --color-danger-red: #ef4444;
+
+  --animate-ticker: ticker 30s linear infinite;
+  --animate-shimmer: shimmer 2s infinite;
+  --animate-blink: blink 1.5s ease-in-out infinite;
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+}
+
+/* 3. Custom keyframes and classes */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-animate {
+  animation: slideUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+@layer base {
+  :root {
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+  }
+
+  .dark {
+    --card-bg: #0d1424;
+    --card-border: #1e293b;
+    --bg-dark: #090e1a;
+  }
+
+  * {
+    border-color: var(--card-border);
+  }
+
+  body {
+    @apply antialiased font-body;
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 transparent;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden bg-slate-200 dark:bg-slate-800 rounded-md;
+  }
+
+  .skeleton::after {
+    @apply absolute inset-0 content-[''];
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    animation: var(--animate-shimmer);
+    transform: translateX(-100%);
+  }
+
+  .ticker-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* ApexCharts Overrides */
+.apexcharts-canvas {
+  font-family: var(--font-body) !important;
+}
+
+.dark .apexcharts-tooltip {
+  background-color: #1a1a1a !important;
+  border-color: #333 !important;
+  color: white !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dark .apexcharts-tooltip-title {
+  background-color: #262626 !important;
+  border-color: #333 !important;
+}
+
+.dark .apexcharts-xaxistooltip {
+  background-color: #1a1a1a !important;
+  border-color: #333 !important;
+  color: white !important;
+}
+
+.dark .apexcharts-gridline {
+  stroke: #262626;
+}
+
+.dark .apexcharts-xaxis-label, 
+.dark .apexcharts-yaxis-label {
+  fill: #64748b;
+}
