@@ -3,6 +3,7 @@
 
 /* 2. Tailwind directives — AFTER imports */
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
