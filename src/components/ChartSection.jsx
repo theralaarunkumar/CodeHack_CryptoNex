@@ -13,7 +13,7 @@ const StatItem = ({ label, value, isCurrency = true }) => {
   return (
     <div className="flex flex-col gap-1 px-4 border-r border-slate-200 dark:border-slate-800 last:border-0">
       <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">{label}</span>
-      <span className="text-sm font-mono font-bold text-slate-900 dark:text-white">
+      <span className="text-sm font-mono font-bold dark:text-white">
         {isCurrency ? '$' : ''}{animatedValue.toLocaleString()}
       </span>
     </div>
@@ -240,7 +240,7 @@ const ChartSection = ({ selectedCoin, theme }) => {
             <div className="flex items-center gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-xl font-display font-black uppercase tracking-tight text-slate-900 dark:text-white">{coinName}</h2>
+                  <h2 className="text-xl font-display font-black uppercase tracking-tight dark:text-white">{coinName}</h2>
                   <span className="text-xs font-bold text-slate-400">/ USDT</span>
                 </div>
                 <div className="flex items-center gap-3">

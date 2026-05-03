@@ -75,13 +75,13 @@ const Watchlist = () => {
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full shadow-sm" style={{ backgroundColor: liveData?.color || '#6b7280' }} />
                         <div>
-                          <div className="text-sm font-bold text-slate-900 dark:text-white">{item.name}</div>
+                          <div className="text-sm font-bold dark:text-white">{item.name}</div>
                           <div className="text-[10px] font-mono font-bold text-slate-500">{item.symbol}</div>
                         </div>
                       </div>
                     </td>
                     <td className="px-5 py-4 text-right">
-                      <div className="text-sm font-mono font-black text-slate-900 dark:text-white">
+                      <div className="text-sm font-mono font-black dark:text-white">
                         {typeof displayPrice === 'number' ? (
                           displayPrice > 1000 
                             ? '$' + displayPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })

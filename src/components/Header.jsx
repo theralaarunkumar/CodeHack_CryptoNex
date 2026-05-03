@@ -59,11 +59,11 @@ const Header = () => {
       {/* Main Nav Row */}
       <nav className="h-16 bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 px-4 sm:px-8 flex items-center justify-between transition-colors duration-300">
         {/* Left: Logo */}
-        <div onClick={scrollToTop} className="flex items-center gap-3 group cursor-pointer flex-shrink-0">
-          <div className="w-9 h-9 bg-brand-green rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 group-hover:scale-110 transition-transform">
-            <span className="text-black font-black text-xl">₿</span>
+        <div onClick={scrollToTop} className="flex items-center gap-2 sm:gap-3 group cursor-pointer flex-shrink-0">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 bg-brand-green rounded-xl flex items-center justify-center shadow-lg shadow-brand-green/20 group-hover:scale-110 transition-transform">
+            <span className="text-black font-black text-lg sm:text-xl">₿</span>
           </div>
-          <span className="font-display font-black text-2xl tracking-tighter hidden sm:block">
+          <span className="font-display font-black text-xl sm:text-2xl tracking-tighter">
             Crypto<span className="text-brand-green">Nex</span>
           </span>
         </div>

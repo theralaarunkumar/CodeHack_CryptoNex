@@ -54,7 +54,7 @@ const RecentTransactions = () => {
 
               {/* Amount & Price (Hidden on small mobile) */}
               <div className="hidden sm:block text-right">
-                <div className="text-xs font-mono font-bold text-slate-900 dark:text-white">
+                <div className="text-xs font-mono font-bold dark:text-white">
                   {tx.amount} {tx.symbol}
                 </div>
                 <div className="text-[11px] font-mono font-bold text-slate-500">

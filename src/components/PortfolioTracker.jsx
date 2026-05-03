@@ -27,7 +27,7 @@ const SummaryCard = ({ label, value, subtext, icon: Icon, color, isCurrency = tr
         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{label}</span>
       </div>
       <div>
-        <div className="text-2xl font-mono font-black text-slate-900 dark:text-white flex items-baseline gap-1">
+        <div className="text-2xl font-mono font-black dark:text-white flex items-baseline gap-1">
           {displayValue(animatedValue)}
         </div>
         <p className="text-[10px] text-slate-400 font-bold mt-1">{subtext}</p>
@@ -71,7 +71,7 @@ const PortfolioTracker = () => {
       {/* Section Header */}
       <div className="flex justify-between items-end px-2">
         <div>
-          <h2 className="text-3xl font-display font-black tracking-tighter uppercase leading-none italic text-slate-900 dark:text-white">
+          <h2 className="text-3xl font-display font-black tracking-tighter uppercase leading-none italic dark:text-white">
             Portfolio <span className="text-brand-green">Tracker</span>
           </h2>
           <p className="text-slate-500 font-medium text-xs mt-2">Personal wealth management & asset distribution.</p>
@@ -188,13 +188,13 @@ const PortfolioTracker = () => {
                       <div className="flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color }} />
                         <div>
-                          <div className="text-xs font-mono font-bold text-slate-900 dark:text-white">{p.symbol}</div>
+                          <div className="text-xs font-mono font-bold dark:text-white">{p.symbol}</div>
                           <div className="text-[9px] font-medium text-slate-500 uppercase">{p.name}</div>
                         </div>
                       </div>
                     </td>
                     <td className="py-3 text-right">
-                      <div className="text-xs font-mono font-bold text-slate-900 dark:text-white">${p.value.toLocaleString(undefined, { maximumFractionDigits: 0 })}</div>
+                      <div className="text-xs font-mono font-bold dark:text-white">${p.value.toLocaleString(undefined, { maximumFractionDigits: 0 })}</div>
                       <div className="text-[9px] font-medium text-slate-500">{p.amount} {p.symbol}</div>
                     </td>
                     <td className="py-3 text-right">

@@ -100,7 +100,7 @@ const MarketStats = () => {
     <div className="space-y-6">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-display font-black tracking-tighter uppercase italic text-slate-900 dark:text-white">
+        <h2 className="text-xl font-display font-black tracking-tighter uppercase italic dark:text-white">
           Market <span className="text-brand-green">Stats</span>
         </h2>
         <div className="flex items-center gap-1.5 px-2 py-0.5 bg-brand-green/10 rounded-full border border-brand-green/20">
