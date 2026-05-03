@@ -1,6 +1,5 @@
 # CryptoNex — Fintech Analytics Terminal
 
-![CryptoNex Dashboard](./public/favicon.svg)
 
 CryptoNex is a high-performance, responsive cryptocurrency analytics dashboard built for the HackStreet April 2026 hackathon. It visualizes market data with Bloomberg-grade aesthetics using entirely mock datasets, simulating a live trading terminal environment without relying on external APIs.
 
